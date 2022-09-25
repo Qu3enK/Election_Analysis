@@ -86,10 +86,14 @@ for candidate_name in candidate_votes:
         # And, set the winning_candidate equal to the candidate's name
         winning_candidate = candidate_name
 
+    # To do: print out the winning candidate, vote count and 
+    # percentage to terminal
+    print(f"{candidate_name}: {vote_percentage: .1f}% ({votes:,})\n")          
+
     # 4. Print the candidate name and percentage of votes
-    print(f"{candidate_name}: received {vote_percentage}% of the vote.")
+    #print(f"{candidate_name}: received {vote_percentage: .1f}% of the vote.")
     # determine how to adjust the decimal place to 1
 
 # 3. Print the candidate vote dictionary
-print(candidate_votes)
+#print(candidate_votes)
 
