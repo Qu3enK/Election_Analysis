@@ -90,6 +90,14 @@ for candidate_name in candidate_votes:
     # percentage to terminal
     print(f"{candidate_name}: {vote_percentage: .1f}% ({votes:,})\n")          
 
+winning_candidate_summary = (
+    f"-------------------------\n"
+    f"Winner: {winning_candidate}\n"
+    f"Winning Vote Count: {winning_count:,}\n"
+    f"Winning Percentage: {winning_percentage: .1f}%\n"
+    f"--------------------------\n")
+print(winning_candidate_summary)
+
     # 4. Print the candidate name and percentage of votes
     #print(f"{candidate_name}: received {vote_percentage: .1f}% of the vote.")
     # determine how to adjust the decimal place to 1
