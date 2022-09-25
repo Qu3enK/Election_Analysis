@@ -68,6 +68,7 @@ for candidate_name in candidate_votes:
 
     # 4. Print the candidate name and percentage of votes
     print(f"{candidate_name}: received {vote_percentage}% of the vote.")
+    # determine how to adjust the decimal place to 1
 
 # 3. Print the candidate vote dictionary
 print(candidate_votes)
