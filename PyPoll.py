@@ -49,7 +49,7 @@ with open(file_to_load) as election_data:
         # Print the candidate name from each row
         candidate_name = row[2]
 
-        # If the candidate does not match any existing candidate
+        # If the candidate does not match any existing candidate add it to the list
         if candidate_name not in candidate_options:
 
             # Add the candidate name to the candidate list
@@ -71,8 +71,9 @@ for candidate_name in candidate_votes:
     # 3. Calculate the percentage of votes
     vote_percentage = float(votes) / float(total_votes) *100
 
-    # To do: print out each candidate's name, vote count, and 
-    # percentage of votes to the terminal
+    # Print out each candidate's name, vote count, and percentage the terminal
+
+    print(f"{candidate_name}: {vote_percentage: .1f}% ({votes:,})\n")
 
     # Determine winning vote count and candidate
     # Determine if the votes is greater than the winning count
@@ -88,7 +89,7 @@ for candidate_name in candidate_votes:
 
     # To do: print out the winning candidate, vote count and 
     # percentage to terminal
-    print(f"{candidate_name}: {vote_percentage: .1f}% ({votes:,})\n")          
+    # print(f"{candidate_name}: {vote_percentage: .1f}% ({votes:,})\n")          
 
 winning_candidate_summary = (
     f"-------------------------\n"
