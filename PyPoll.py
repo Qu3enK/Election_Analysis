@@ -93,7 +93,7 @@ with open(file_to_save, "w") as txt_file:
         candidate_results = (f"{candidate_name}: {vote_percentage: .1f}% ({votes:,})\n")
         print(candidate_results)
 
-        # SAve he candidate results to our text file
+        # Save the candidate results to our text file
         txt_file.write(candidate_results)
 
         # Determine winning vote count and candidate
@@ -101,25 +101,21 @@ with open(file_to_save, "w") as txt_file:
         if (votes > winning_count) and (vote_percentage > winning_percentage):
 
             # If true then set winning_count = votes and
-            # winning_percent = vote_percentage
+            # winning_percent = vote_percentage and winning_candidate = candidate's name
             winning_count = votes
             winning_percentage = vote_percentage
-
-            # And, set the winning_candidate equal to the candidate's name
             winning_candidate = candidate_name
 
+# Print the winning candidate's results to the terminal
     winning_candidate_summary = (
         f"-------------------------\n"
         f"Winner: {winning_candidate}\n"
         f"Winning Vote Count: {winning_count:,}\n"
         f"Winning Percentage: {winning_percentage: .1f}%\n"
         f"--------------------------\n")
-    # print(winning_candidate_summary)
+    
+    print(winning_candidate_summary)
 
-        # 4. Print the candidate name and percentage of votes
-        #print(f"{candidate_name}: received {vote_percentage: .1f}% of the vote.")
-        # determine how to adjust the decimal place to 1
-
-    # 3. Print the candidate vote dictionary
-    #print(candidate_votes)
+    # Save the winning candidate's name to the text file
+    txt_file.write(winning_candidate_summary)
 
